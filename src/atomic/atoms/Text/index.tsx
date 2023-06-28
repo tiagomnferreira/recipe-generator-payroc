@@ -6,9 +6,10 @@ import { COLOR } from "../../../style/palette";
 const Text = ({
   children,
   fontColor = COLOR.TEXT,
-  fontSize = 12,
+  fontSize = 14,
+  italic = false,
 }: PropsWithChildren<Props>) => (
-  <Container fontColor={fontColor} fontSize={fontSize}>
+  <Container fontColor={fontColor} fontSize={fontSize} italic={italic}>
     {children}
   </Container>
 );

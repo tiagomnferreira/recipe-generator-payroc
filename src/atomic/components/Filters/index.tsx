@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Container, Bar, List, Lock } from "./styled-components";
 import { Props } from "./types";
 
-const Filters = ({ ingredients }: Props) => {
-  const [isOpen, setIsOpen] = useState(true);
+const Filters = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen((prevState) => !prevState);
 

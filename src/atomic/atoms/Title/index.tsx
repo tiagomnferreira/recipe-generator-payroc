@@ -8,8 +8,14 @@ const Title = ({
   fontColor = COLOR.TEXT,
   fontSize,
   underline = false,
+  ...props
 }: PropsWithChildren<Props>) => (
-  <Container fontColor={fontColor} fontSize={fontSize} underline={underline}>
+  <Container
+    fontColor={fontColor}
+    fontSize={fontSize}
+    underline={underline}
+    {...props}
+  >
     {children}
   </Container>
 );

@@ -3,8 +3,8 @@ import { Container } from "./styled-components";
 import { Props } from "./types";
 
 const MealCard = ({ meal, onClick }: Props) => (
-  <Container onClick={onClick}>
-    <Thumbnail src={meal.strMealThumb} />
+  <Container onClick={() => onClick(meal.idMeal)}>
+    <Thumbnail src={meal.strMealThumb || ""} />
   </Container>
 );
 

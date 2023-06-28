@@ -1,6 +1,6 @@
-import { Meal, NullaryFn } from "../../../typescript";
+import { Meal, MealValue, NullaryFn, UnaryFn } from "../../../typescript";
 
 export interface Props {
   meal: Meal;
-  onClick: NullaryFn<void>;
+  onClick: UnaryFn<MealValue, void>;
 }
