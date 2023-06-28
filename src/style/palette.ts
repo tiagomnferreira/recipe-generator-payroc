@@ -1,0 +1,8 @@
+export enum COLOR {
+  PRIMARY = "#FF6F61",
+  SECONDARY = "#00A896",
+  ACCENT = "#F4C724",
+  BACKGROUND = "#FFFFFF",
+  TEXT = "#333333",
+  NEUTRAL = "#CCCCCC",
+}
