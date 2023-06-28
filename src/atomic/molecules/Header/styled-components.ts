@@ -7,4 +7,9 @@ export const Container = styled.header`
   padding: 0 16px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  img {
+    height: 75%;
+  }
 `;

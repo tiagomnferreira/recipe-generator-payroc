@@ -1,23 +1,26 @@
 import { memo, useEffect, useState } from "react";
-import IngredientsListing from "../../components/IngredientsListing";
 import { Container } from "./styled-components";
-import Sidebar from "../../organisms/Sidebar";
-import { Ingredient } from "../../../typescript";
-import { getAllIngredients } from "../../../services";
+import Filters from "../../components/Filters";
+import MealsListing from "../../organisms/MealsListing";
+import { getMealsByFirstLetter } from "../../../services";
+import { Meal } from "../../../typescript";
+import { useNavigate } from "react-router-dom";
+import { onMealClick } from "./utilts";
 
 const HomePage = () => {
-  const [ingredients, setIngredients] = useState<Ingredient[]>([]);
+  const [meals, setMeals] = useState<Meal[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    getAllIngredients().then(({ data }) => {
-      setIngredients(data.meals);
+    getMealsByFirstLetter("a").then(({ data }) => {
+      setMeals(data.meals);
     });
   }, []);
 
   return (
     <Container>
-      <Sidebar />
-      <IngredientsListing />
+      <Filters ingredients={[]} />
+      <MealsListing meals={meals} onMealClick={onMealClick(navigate)} />
     </Container>
   );
 };

@@ -3,15 +3,14 @@ import { Container } from "./styled-components";
 import { Props } from "./types";
 import { COLOR } from "../../../style/palette";
 
-const Title = ({
+const Text = ({
   children,
   fontColor = COLOR.TEXT,
-  fontSize,
-  underline = false,
+  fontSize = 12,
 }: PropsWithChildren<Props>) => (
-  <Container fontColor={fontColor} fontSize={fontSize} underline={underline}>
+  <Container fontColor={fontColor} fontSize={fontSize}>
     {children}
   </Container>
 );
 
-export default memo(Title);
+export default memo(Text);
