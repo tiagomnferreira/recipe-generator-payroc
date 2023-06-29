@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filters UI should match the generated snapshot 1`] = `
+<div>
+  <section
+    aria-label="Filters container"
+    class="sc-dlfmnT cMtZwp"
+    role="listbox"
+  >
+    <div
+      class="sc-hKgJyM gKjfLd"
+    >
+      Filter
+    </div>
+    <svg
+      class="sc-jSgtCu iEJvLn"
+      fill="none"
+      height="40"
+      viewBox="0 0 24 24"
+      width="40"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M13.275 19H9.151c-1.854-.032-3.33-1.599-3.3-3.5V12c-.017-1.574.997-2.963 2.474-3.39v-.46C8.275 6.463 9.568 5.053 11.213 5c1.645.053 2.937 1.463 2.888 3.15v.46c1.477.427 2.491 1.816 2.475 3.39v3.5c.03 1.901-1.447 3.468-3.3 3.5Z"
+        stroke="#000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+      />
+      <path
+        d="M10.463 15.5a.75.75 0 0 0 1.5 0h-1.5Zm1.5-1.75a.75.75 0 0 0-1.5 0h1.5Zm1.94-4.416a.75.75 0 0 0 .395-1.448l-.394 1.448Zm-.627-.834v.75-.75Zm-4.125 0v.75-.75Zm-1.022-.614a.75.75 0 1 0 .394 1.448l-.394-1.448Zm3.834 7.614v-1.75h-1.5v1.75h1.5Zm2.335-7.614a3.878 3.878 0 0 0-1.023-.136l.002 1.5c.211 0 .422.028.627.084l.394-1.448Zm-1.022-.136H9.151v1.5h4.125v-1.5Zm-4.124 0c-.346 0-.69.046-1.023.136l.394 1.448c.205-.056.416-.084.627-.084l.002-1.5Z"
+        fill="#000"
+      />
+    </svg>
+    <div
+      class="sc-eCstFB hiPhNx"
+    >
+      <div
+        class="sc-gKsdJj"
+      >
+        <p
+          class="sc-gsTChe fBXRVx"
+          font-size="14"
+          fontcolor="#333333"
+        >
+          By meal name:
+        </p>
+        <div
+          class="sc-jrAHeI kYdNEm"
+        >
+          <input
+            class="sc-kEjaJL ktXoSj"
+            placeholder="Type your meal name"
+          />
+        </div>
+      </div>
+      <div
+        class="sc-fubCSR dOdRZH"
+      >
+        <p
+          class="sc-gsTChe fBXRVx sc-pGawl hsvTho"
+          font-size="14"
+          fontcolor="#333333"
+        >
+          OR
+        </p>
+      </div>
+      <div
+        class="sc-gKsdJj"
+      >
+        <p
+          class="sc-gsTChe fBXRVx"
+          font-size="14"
+          fontcolor="#333333"
+        >
+          By Ingredient:
+        </p>
+        <div
+          class="sc-jrAHeI kYdNEm"
+        >
+          <input
+            class="sc-kEjaJL ktXoSj"
+            placeholder="Type the ingredient's name"
+          />
+        </div>
+        <div
+          class="sc-crrsTd cMpXGW"
+        />
+      </div>
+      <div
+        class="sc-fubCSR dOdRZH"
+      >
+        <p
+          class="sc-gsTChe fBXRVx sc-pGawl hsvTho"
+          font-size="14"
+          fontcolor="#333333"
+        >
+          OR
+        </p>
+      </div>
+      <div
+        class="sc-gKsdJj"
+      >
+        <p
+          class="sc-gsTChe fBXRVx"
+          font-size="14"
+          fontcolor="#333333"
+        >
+          By Category:
+        </p>
+        <div
+          class="sc-crrsTd cMpXGW"
+        />
+      </div>
+      <div
+        class="sc-fubCSR dOdRZH"
+      >
+        <p
+          class="sc-gsTChe fBXRVx sc-pGawl hsvTho"
+          font-size="14"
+          fontcolor="#333333"
+        >
+          OR
+        </p>
+      </div>
+      <div
+        class="sc-gKsdJj"
+      >
+        <p
+          class="sc-gsTChe fBXRVx"
+          font-size="14"
+          fontcolor="#333333"
+        >
+          By Area:
+        </p>
+        <div
+          class="sc-crrsTd cMpXGW"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-hKgJyM gKjfLd"
+    />
+  </section>
+</div>
+`;

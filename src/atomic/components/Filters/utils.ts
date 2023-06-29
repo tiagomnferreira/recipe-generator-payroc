@@ -5,25 +5,28 @@ import {
   FilterType,
   Ingredient,
   Meal,
+  NullaryFn,
   SetState,
 } from "../../../typescript";
 import { getMealByName, getMealsByType } from "../../../services";
 import { get } from "lodash";
 
 export const onChange =
-  (setMeals: SetState<Meal[]>) => (e: ChangeEvent<HTMLInputElement>) => {
+  (setMeals: SetState<Meal[]>, getInitialMeals: NullaryFn<void>) =>
+  (e: ChangeEvent<HTMLInputElement>) => {
     const name = e.target.value;
     if (name !== "")
       getMealByName(name).then(({ data }) => {
-        setMeals(data.meals);
+        setMeals(data?.meals || []);
       });
+    else getInitialMeals();
   };
 
 export const filterBy =
   (setMeals: SetState<Meal[]>, setActiveTag: SetState<string | undefined>) =>
   (type: FilterType, value: string) => {
     getMealsByType(type, value).then(({ data }) => {
-      setMeals(data.meals);
+      setMeals(data?.meals || []);
       setActiveTag(value);
     });
   };
@@ -47,6 +50,8 @@ export const onSearchIngredient =
 
 export const filterIngredients = (filter: string, ingredients: string[]) =>
   ingredients
-    .map((item) => (item.includes(filter) ? item : ""))
+    .map((item) =>
+      item.toLowerCase().includes(filter.toLowerCase()) ? item : ""
+    )
     .filter(Boolean)
     .slice(0, 28);

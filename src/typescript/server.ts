@@ -6,7 +6,7 @@ export interface Ingredient {
 }
 
 export interface Response<T> {
-  meals: T[];
+  meals: T[] | null;
 }
 
 export interface Category {

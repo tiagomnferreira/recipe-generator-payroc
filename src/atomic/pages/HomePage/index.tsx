@@ -10,7 +10,7 @@ const HomePage = () => {
 
   const getInitialMeals = () =>
     getMealsByFirstLetter("a").then(({ data }) => {
-      setMeals(data.meals);
+      setMeals(data?.meals || []);
     });
 
   useEffect(() => {

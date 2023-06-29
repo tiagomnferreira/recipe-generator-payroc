@@ -31,10 +31,10 @@ export const Bar = styled.div`
 export const FiltersList = styled.div<ContainerProps>`
   height: ${({ isOpen }) => (isOpen ? "500px" : "0px")};
   padding: ${({ isOpen }) => (isOpen ? "30px 12px 12px 12px" : "0px")};
-  transition: all 0.5s ease-in-out;
-  position: relative;
   overflow: ${({ isOpen }) => (isOpen ? "auto" : "hidden")};
+  position: relative;
   border: 1px solid ${COLOR.NEUTRAL};
+  transition: all 0.5s ease-in-out;
 `;
 
 export const Lock = styled(Icon)`
@@ -45,6 +45,7 @@ export const Lock = styled(Icon)`
   background-color: ${COLOR.ACCENT};
   border-radius: 20px;
   z-index: 1;
+  cursor: pointer;
 `;
 
 export const Group = styled.div``;

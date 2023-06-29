@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import {
   Container,
   Bar,
@@ -40,26 +40,45 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
 
   useEffect(() => {
     getAllIngredients().then(({ data }) => {
-      setIngredients(parseIngredientsToLabels(data.meals));
+      setIngredients(parseIngredientsToLabels(data?.meals || []));
     });
     getAllAreas().then(({ data }) => {
-      setAreas(parseToLabels(data.meals));
+      setAreas(parseToLabels(data?.meals || []));
     });
     getAllCategories().then(({ data }) => {
-      setCategories(parseToLabels(data.meals));
+      setCategories(parseToLabels(data?.meals || []));
     });
   }, []);
 
   return (
-    <Container>
+    <Container aria-label="Filters container" role="listbox">
       <Bar onClick={toggle}>Filter</Bar>
-      <Lock name={isOpen ? "locketOpen" : "locketClosed"} />
+      <Lock onClick={toggle} name={isOpen ? "locketOpen" : "locketClosed"} />
       <FiltersList isOpen={isOpen}>
         <Group>
           <Text>By meal name:</Text>
           <Input
             placeholder="Type your meal name"
-            onChange={debounce(onChange(setMeals), 1000)}
+            onChange={debounce(onChange(setMeals, getInitialMeals), 1000)}
+          />
+        </Group>
+
+        <Divider>
+          <DividerText>OR</DividerText>
+        </Divider>
+
+        <Group>
+          <Text>By Ingredient:</Text>
+          <Input
+            placeholder="Type the ingredient's name"
+            onChange={debounce(onSearchIngredient(setIngredientFilter), 1000)}
+          />
+          <TagsListing
+            activeTag={activeTag}
+            labels={filterIngredients(ingredientFilter, ingredients)}
+            onTagClick={(ingredient) =>
+              filterBy(setMeals, setActiveTag)("i", ingredient)
+            }
           />
         </Group>
 
@@ -90,25 +109,6 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
             onTagClick={(area) => filterBy(setMeals, setActiveTag)("a", area)}
           />
         </Group>
-
-        <Divider>
-          <DividerText>OR</DividerText>
-        </Divider>
-
-        <Group>
-          <Text>By Ingredient:</Text>
-          <Input
-            placeholder="Type the ingredient's name"
-            onChange={debounce(onSearchIngredient(setIngredientFilter), 1000)}
-          />
-          <TagsListing
-            activeTag={activeTag}
-            labels={filterIngredients(ingredientFilter, ingredients)}
-            onTagClick={(ingredient) =>
-              filterBy(setMeals, setActiveTag)("i", ingredient)
-            }
-          />
-        </Group>
       </FiltersList>
       {isOpen && <ClearBtn onClick={getInitialMeals}>Clear</ClearBtn>}
       <Bar onClick={toggle} />
@@ -116,4 +116,4 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
   );
 };
 
-export default Filters;
+export default memo(Filters);

@@ -16,7 +16,7 @@ const routes: RouteObject[] = [
         element: <MealPage />,
         loader: async ({ params }) => {
           const response = await getMealById(params.id || "");
-          return response.data.meals.pop();
+          return response.data?.meals?.pop() || { id: "" };
         },
       },
     ],
