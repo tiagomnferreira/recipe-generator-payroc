@@ -1,4 +1,4 @@
-import { css, styled } from "styled-components";
+import { styled } from "styled-components";
 import { COLOR } from "../../../style/palette";
 import { generateBoxShadow } from "../../../style/utils";
 import { ContainerProps } from "./types";

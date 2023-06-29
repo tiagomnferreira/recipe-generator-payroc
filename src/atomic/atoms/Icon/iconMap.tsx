@@ -1,5 +1,3 @@
-import { SVGProps } from "react";
-
 const locketClosed = [
   <path
     stroke="#000"

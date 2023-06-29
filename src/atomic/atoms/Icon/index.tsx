@@ -1,4 +1,4 @@
-import { createElement, memo } from "react";
+import { memo } from "react";
 import iconMap from "./iconMap";
 import { Props } from "./types";
 
