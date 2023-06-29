@@ -9,8 +9,21 @@ export const Container = styled.article`
   overflow: hidden;
 `;
 
+export const Content = styled.div`
+  @media (max-width: 659px) {
+    overflow: auto;
+  }
+`;
+
 export const Row = styled.section`
   display: flex;
+`;
+
+export const ResponsiveIngredients = styled(Row)`
+  @media (max-width: 659px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 `;
 
 export const Image = styled.img`
@@ -28,10 +41,17 @@ export const Instructions = styled.section`
   gap: 4px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+
+  @media (max-width: 659px) {
+    overflow: initial;
+  }
 `;
 
 export const ScrollingText = styled(Text)`
   overflow: auto;
   white-space: break-spaces;
+
+  @media (max-width: 659px) {
+    overflow: initial;
+  }
 `;

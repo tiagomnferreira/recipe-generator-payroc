@@ -17,6 +17,10 @@ export const Container = styled.section`
   width: 300px;
   background-color: ${COLOR.BACKGROUND};
   z-index: 1;
+
+  @media (max-width: 659px) {
+    width: calc(100% - 40px);
+  }
 `;
 
 export const Bar = styled.div`
@@ -46,6 +50,10 @@ export const Lock = styled(Icon)`
   border-radius: 20px;
   z-index: 1;
   cursor: pointer;
+
+  @media (max-width: 659px) {
+    left: 47%;
+  }
 `;
 
 export const Group = styled.div``;
