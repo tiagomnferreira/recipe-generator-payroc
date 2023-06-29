@@ -1,4 +1,3 @@
-import Text from "../../atoms/Text";
 import Thumbnail from "../../atoms/Thumbnail";
 import { Container, MealName } from "./styled-components";
 import { Props } from "./types";
