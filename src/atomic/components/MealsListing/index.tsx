@@ -11,7 +11,11 @@ const MealsListing = ({ meals }: Props) => {
   return (
     <Container>
       {meals.map((item) => (
-        <MealCard meal={item} onClick={onMealClick(navigate)} />
+        <MealCard
+          key={item.idMeal}
+          meal={item}
+          onClick={onMealClick(navigate)}
+        />
       ))}
     </Container>
   );

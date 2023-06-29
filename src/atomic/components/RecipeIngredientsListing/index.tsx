@@ -9,7 +9,7 @@ const RecipeIngredientsList = ({ meal }: Props) => {
     <ul>
       {ingredients.map((item) => (
         <li>
-          <Text>{item}</Text>
+          <Text capitalize>{item}</Text>
         </li>
       ))}
     </ul>

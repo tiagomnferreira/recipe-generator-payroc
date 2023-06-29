@@ -9,12 +9,19 @@ export interface Response<T> {
   meals: T[];
 }
 
+export interface Category {
+  strCategory: MealValue;
+}
+
+export interface Area {
+  strArea: MealValue;
+}
+
 export type MealValue = string | null;
-export interface Meal {
+
+export interface Meal extends Category, Area {
   dateModified: MealValue;
   idMeal: MealValue;
-  strArea: MealValue;
-  strCategory: MealValue;
   strCreativeCommonsConfirmed: MealValue;
   strDrinkAlternate: MealValue;
   strImageSource: MealValue;
@@ -65,3 +72,5 @@ export interface Meal {
   strTags: MealValue;
   strYoutube: MealValue;
 }
+
+export type FilterType = "c" | "i" | "a";

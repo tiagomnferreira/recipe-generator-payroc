@@ -6,4 +6,5 @@ export const Container = styled.p<Props>`
   color: ${({ fontColor }) => fontColor};
   font-size: ${({ fontSize }) => fontSize}px;
   font-style: ${({ italic }) => (italic ? "italic" : "")};
+  text-transform: ${({ capitalize }) => (capitalize ? "capitalize" : "")};
 `;

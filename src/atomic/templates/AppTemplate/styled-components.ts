@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 `;
 
 export const Content = styled.main`
@@ -11,4 +11,5 @@ export const Content = styled.main`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  overflow: auto;
 `;

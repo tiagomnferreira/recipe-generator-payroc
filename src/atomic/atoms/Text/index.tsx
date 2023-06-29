@@ -8,8 +8,16 @@ const Text = ({
   fontColor = COLOR.TEXT,
   fontSize = 14,
   italic = false,
+  capitalize = false,
+  ...props
 }: PropsWithChildren<Props>) => (
-  <Container fontColor={fontColor} fontSize={fontSize} italic={italic}>
+  <Container
+    fontColor={fontColor}
+    fontSize={fontSize}
+    italic={italic}
+    capitalize={capitalize}
+    {...props}
+  >
     {children}
   </Container>
 );

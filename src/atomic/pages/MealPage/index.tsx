@@ -2,16 +2,22 @@ import { memo } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Meal } from "../../../typescript";
 import MealPageTitle from "../../molecules/MealPageTitle";
-import MealPageTags from "../../molecules/MealPageTags";
 import Text from "../../atoms/Text";
 import RecipeIngredientsList from "../../components/RecipeIngredientsListing";
-import { Container, Image, Link, Row } from "./styled-components";
-import Icon from "../../atoms/Icon";
+import {
+  Container,
+  Image,
+  Instructions,
+  Link,
+  Row,
+  ScrollingText,
+} from "./styled-components";
+import TagsListing from "../../molecules/TagsListing";
 
 const MealPage = () => {
   const meal = useLoaderData() as Meal;
 
-  console.log(meal);
+  const tags = meal.strTags?.split(",");
 
   return (
     <Container>
@@ -21,13 +27,13 @@ const MealPage = () => {
         <div>
           <Text fontSize={20}>Ingredients:</Text>
           <RecipeIngredientsList meal={meal} />
-          <MealPageTags meal={meal} />
+          {tags && <TagsListing labels={tags} />}
         </div>
       </Row>
-      <section>
+      <Instructions>
         <Text fontSize={20}>Instructions:</Text>
-        <Text>{meal.strInstructions}</Text>
-      </section>
+        <ScrollingText>{meal.strInstructions}</ScrollingText>
+      </Instructions>
       <Row>
         {meal.strSource && (
           <a href={meal.strSource} target="_blank" rel="noopener noreferrer">

@@ -8,8 +8,7 @@ export const getAllIngredientsFromMeal = (meal: Meal) =>
       const ingredient = get(meal, `strIngredient${position}`, "");
       const measurements = get(meal, `strMeasure${position}`, "");
 
-      if (position === undefined || ingredient === "" || measurements === "")
-        return acc;
+      if (position === undefined || !ingredient || !measurements) return acc;
 
       acc.push(`${ingredient} (${measurements})`);
     }
