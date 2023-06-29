@@ -1,8 +1,27 @@
 # Recipe Generator
 
+## Packages used
+
+- axios: Handles my REST requests to the api, offers a simpler sintax and handles the errors promise-based
+- lodash: Helps me access properties in objects that might not exist with more safety and has utils like debounce that are very usefull
+- react-router-dom: Handles the routing in the app
+- styled-components: Gives styling to my components with dynamic values based on state or props
+
 ## Structure
 
 This project was built using an atomic-design structure. For more information please visit: https://bradfrost.com/blog/post/atomic-web-design/
+
+## API
+
+https://www.themealdb.com/api.php
+
+## Notes
+
+There was some implementation of snapshot and unit testing, mostly on the component: `src/atomic/components/Filters/index.tsx`
+
+## Issues detected
+
+Links to youtube videos, coming from the API, are not available
 
 ## Available Scripts
 
@@ -10,23 +29,6 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

@@ -8,7 +8,9 @@ exports[`Filters UI should match the generated snapshot 1`] = `
     role="listbox"
   >
     <div
+      aria-label="Filter header"
       class="sc-hKgJyM gKjfLd"
+      role="menubar"
     >
       Filter
     </div>
@@ -37,7 +39,9 @@ exports[`Filters UI should match the generated snapshot 1`] = `
       class="sc-eCstFB hiPhNx"
     >
       <div
+        aria-label="Filter by name group"
         class="sc-gKsdJj"
+        role="group"
       >
         <p
           class="sc-gsTChe fBXRVx"
@@ -50,8 +54,10 @@ exports[`Filters UI should match the generated snapshot 1`] = `
           class="sc-jrAHeI kYdNEm"
         >
           <input
+            aria-label="Search input by name"
             class="sc-kEjaJL ktXoSj"
             placeholder="Type your meal name"
+            role="search"
           />
         </div>
       </div>
@@ -67,7 +73,9 @@ exports[`Filters UI should match the generated snapshot 1`] = `
         </p>
       </div>
       <div
+        aria-label="Filter by ingredient group"
         class="sc-gKsdJj"
+        role="group"
       >
         <p
           class="sc-gsTChe fBXRVx"
@@ -100,7 +108,9 @@ exports[`Filters UI should match the generated snapshot 1`] = `
         </p>
       </div>
       <div
+        aria-label="Filter by category group"
         class="sc-gKsdJj"
+        role="group"
       >
         <p
           class="sc-gsTChe fBXRVx"
@@ -125,7 +135,9 @@ exports[`Filters UI should match the generated snapshot 1`] = `
         </p>
       </div>
       <div
+        aria-label="Filter by area group"
         class="sc-gKsdJj"
+        role="group"
       >
         <p
           class="sc-gsTChe fBXRVx"
@@ -140,7 +152,9 @@ exports[`Filters UI should match the generated snapshot 1`] = `
       </div>
     </div>
     <div
+      aria-label="Filter footer"
       class="sc-hKgJyM gKjfLd"
+      role="menubar"
     />
   </section>
 </div>

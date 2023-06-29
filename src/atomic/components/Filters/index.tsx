@@ -52,14 +52,18 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
 
   return (
     <Container aria-label="Filters container" role="listbox">
-      <Bar onClick={toggle}>Filter</Bar>
+      <Bar onClick={toggle} aria-label="Filter header" role="menubar">
+        Filter
+      </Bar>
       <Lock onClick={toggle} name={isOpen ? "locketOpen" : "locketClosed"} />
       <FiltersList isOpen={isOpen}>
-        <Group>
+        <Group aria-label="Filter by name group" role="group">
           <Text>By meal name:</Text>
           <Input
             placeholder="Type your meal name"
             onChange={debounce(onChange(setMeals, getInitialMeals), 1000)}
+            aria-label="Search input by name"
+            role="search"
           />
         </Group>
 
@@ -67,7 +71,7 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
           <DividerText>OR</DividerText>
         </Divider>
 
-        <Group>
+        <Group aria-label="Filter by ingredient group" role="group">
           <Text>By Ingredient:</Text>
           <Input
             placeholder="Type the ingredient's name"
@@ -86,7 +90,7 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
           <DividerText>OR</DividerText>
         </Divider>
 
-        <Group>
+        <Group aria-label="Filter by category group" role="group">
           <Text>By Category:</Text>
           <TagsListing
             activeTag={activeTag}
@@ -101,7 +105,7 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
           <DividerText>OR</DividerText>
         </Divider>
 
-        <Group>
+        <Group aria-label="Filter by area group" role="group">
           <Text>By Area:</Text>
           <TagsListing
             activeTag={activeTag}
@@ -110,8 +114,16 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
           />
         </Group>
       </FiltersList>
-      {isOpen && <ClearBtn onClick={getInitialMeals}>Clear</ClearBtn>}
-      <Bar onClick={toggle} />
+      {isOpen && (
+        <ClearBtn
+          onClick={getInitialMeals}
+          aria-label="Filter clear button"
+          role="button"
+        >
+          Clear
+        </ClearBtn>
+      )}
+      <Bar onClick={toggle} aria-label="Filter footer" role="menubar" />
     </Container>
   );
 };

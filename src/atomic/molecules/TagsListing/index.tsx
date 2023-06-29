@@ -13,6 +13,8 @@ const TagsListing = ({ labels, onTagClick, activeTag }: Props) => (
         onClick={() => {
           onTagClick?.(tag);
         }}
+        role="textbox"
+        aria-label="Tag"
       />
     ))}
   </Container>
