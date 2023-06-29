@@ -8,7 +8,7 @@ const RecipeIngredientsList = ({ meal }: Props) => {
   return (
     <ul>
       {ingredients.map((item) => (
-        <li>
+        <li key={item}>
           <Text capitalize>{item}</Text>
         </li>
       ))}

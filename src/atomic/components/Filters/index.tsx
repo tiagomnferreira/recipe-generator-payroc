@@ -57,7 +57,10 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
       <FiltersList isOpen={isOpen}>
         <Group>
           <Text>By meal name:</Text>
-          <Input onChange={debounce(onChange(setMeals), 1000)} />
+          <Input
+            placeholder="Type your meal name"
+            onChange={debounce(onChange(setMeals), 1000)}
+          />
         </Group>
 
         <Divider>
@@ -95,6 +98,7 @@ const Filters = ({ setMeals, getInitialMeals }: Props) => {
         <Group>
           <Text>By Ingredient:</Text>
           <Input
+            placeholder="Type the ingredient's name"
             onChange={debounce(onSearchIngredient(setIngredientFilter), 1000)}
           />
           <TagsListing
