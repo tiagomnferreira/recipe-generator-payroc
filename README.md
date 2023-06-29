@@ -1,5 +1,9 @@
 # Recipe Generator
 
+Hosted on Netlify
+
+https://master--recipe-generator-payroc.netlify.app/
+
 ## Packages used
 
 - axios: Handles my REST requests to the api, offers a simpler sintax and handles the errors promise-based
